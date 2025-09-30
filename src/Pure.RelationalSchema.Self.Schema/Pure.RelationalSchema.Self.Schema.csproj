@@ -13,4 +13,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/kudima03/Pure.RelationalSchema.Self.Schema</PackageProjectUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Pure.RelationalSchema" Version="1.1.0" />
+  </ItemGroup>
 </Project>
