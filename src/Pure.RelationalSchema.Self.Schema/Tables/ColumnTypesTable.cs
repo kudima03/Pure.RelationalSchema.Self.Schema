@@ -11,7 +11,7 @@ public sealed record ColumnTypesTable : ITable
 {
     public IString Name => new String("column_types");
 
-    public IEnumerable<IColumn> Columns => [new NameColumn(), new ColumnTypeColumn()];
+    public IEnumerable<IColumn> Columns => [new NameColumn()];
 
     public IEnumerable<IIndex> Indexes => [];
 }
