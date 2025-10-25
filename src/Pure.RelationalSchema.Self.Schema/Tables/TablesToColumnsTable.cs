@@ -12,7 +12,7 @@ public sealed record TablesToColumnsTable : ITable
     public IString Name => new String("tables_to_columns");
 
     public IEnumerable<IColumn> Columns =>
-        [new GuidColumn(), new ReferenceToColumnColumn(), new ReferenceToTableColumn()];
+        [new ReferenceToColumnColumn(), new ReferenceToTableColumn()];
 
     public IEnumerable<IIndex> Indexes => [];
 }

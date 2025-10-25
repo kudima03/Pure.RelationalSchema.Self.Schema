@@ -12,7 +12,7 @@ public sealed record SchemasToTablesTable : ITable
     public IString Name => new String("schemas_to_tables");
 
     public IEnumerable<IColumn> Columns =>
-        [new GuidColumn(), new ReferenceToSchemaColumn(), new ReferenceToTableColumn()];
+        [new ReferenceToSchemaColumn(), new ReferenceToTableColumn()];
 
     public IEnumerable<IIndex> Indexes => [];
 }
