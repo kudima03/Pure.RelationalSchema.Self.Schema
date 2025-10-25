@@ -12,11 +12,7 @@ public sealed record ForeignKeysToReferencedColumnsTable : ITable
     public IString Name => new String("foreign_keys_to_referenced_columns");
 
     public IEnumerable<IColumn> Columns =>
-        [
-            new GuidColumn(),
-            new ReferenceToColumnColumn(),
-            new ReferenceToForeignKeyColumn(),
-        ];
+        [new ReferenceToColumnColumn(), new ReferenceToForeignKeyColumn()];
 
     public IEnumerable<IIndex> Indexes => [];
 }
