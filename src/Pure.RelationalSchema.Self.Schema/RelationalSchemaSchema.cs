@@ -25,6 +25,7 @@ public sealed record RelationalSchemaSchema : ISchema
             new ForeignKeysToReferencedColumnsTable(),
             new ForeignKeysTable(),
             new SchemasToTablesTable(),
+            new SchemasToForeignKeysTable(),
             new SchemasTable(),
         ];
 
