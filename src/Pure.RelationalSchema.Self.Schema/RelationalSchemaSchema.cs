@@ -35,6 +35,8 @@ public sealed record RelationalSchemaSchema : ISchema
             new TablesToColumnsColumnForeignKey(),
             new TablesToIndexesIndexesForeignKey(),
             new TablesToIndexesTableForeignKey(),
+            new IndexesToColumnsColumnForeignKey(),
+            new IndexesToColumnsIndexForeignKey(),
             new ForeignKeysReferencingTableForeignKey(),
             new ForeignKeysReferencedTableForeignKey(),
             new ForeignKeysToReferencingColumnsTableColumnForeignKey(),
