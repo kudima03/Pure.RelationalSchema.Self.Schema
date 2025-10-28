@@ -20,6 +20,7 @@ public sealed record RelationalSchemaSchema : ISchema
             new ColumnTypesTable(),
             new TablesToIndexesTable(),
             new IndexesTable(),
+            new IndexesToColumnsTable(),
             new ForeignKeysToReferencingColumnsTable(),
             new ForeignKeysToReferencedColumnsTable(),
             new ForeignKeysTable(),
