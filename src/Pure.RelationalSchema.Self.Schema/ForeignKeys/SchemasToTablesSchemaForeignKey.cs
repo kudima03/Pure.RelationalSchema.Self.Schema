@@ -13,7 +13,7 @@ public sealed record SchemasToTablesSchemaForeignKey : IForeignKey
 
     public IEnumerable<IColumn> ReferencingColumns => [new ReferenceToSchemaColumn()];
 
-    public ITable ReferencedTable => new TablesTable();
+    public ITable ReferencedTable => new SchemasTable();
 
     public IEnumerable<IColumn> ReferencedColumns => [new RowDeterminedHashColumn()];
 }
