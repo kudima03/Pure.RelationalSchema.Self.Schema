@@ -14,19 +14,19 @@ public sealed record RelationalSchemaSchema : ISchema
 
     public IEnumerable<ITable> Tables =>
         [
-            new TablesTable(),
-            new TablesToColumnsTable(),
-            new ColumnsTable(),
             new ColumnTypesTable(),
-            new TablesToIndexesTable(),
+            new ColumnsTable(),
             new IndexesTable(),
+            new TablesTable(),
+            new ForeignKeysTable(),
+            new SchemasTable(),
+            new TablesToColumnsTable(),
+            new TablesToIndexesTable(),
             new IndexesToColumnsTable(),
             new ForeignKeysToReferencingColumnsTable(),
             new ForeignKeysToReferencedColumnsTable(),
-            new ForeignKeysTable(),
             new SchemasToTablesTable(),
             new SchemasToForeignKeysTable(),
-            new SchemasTable(),
         ];
 
     public IEnumerable<IForeignKey> ForeignKeys =>
