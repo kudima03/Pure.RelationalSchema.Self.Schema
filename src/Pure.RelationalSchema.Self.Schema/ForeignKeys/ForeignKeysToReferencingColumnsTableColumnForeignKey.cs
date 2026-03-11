@@ -1,7 +1,6 @@
 using Pure.RelationalSchema.Abstractions.Column;
 using Pure.RelationalSchema.Abstractions.ForeignKey;
 using Pure.RelationalSchema.Abstractions.Table;
-using Pure.RelationalSchema.Column;
 using Pure.RelationalSchema.Self.Schema.Columns;
 using Pure.RelationalSchema.Self.Schema.Tables;
 
@@ -15,5 +14,5 @@ public sealed record ForeignKeysToReferencingColumnsTableColumnForeignKey : IFor
 
     public ITable ReferencedTable => new ColumnsTable();
 
-    public IEnumerable<IColumn> ReferencedColumns => [new RowDeterminedHashColumn()];
+    public IEnumerable<IColumn> ReferencedColumns => [new UuidColumn()];
 }
