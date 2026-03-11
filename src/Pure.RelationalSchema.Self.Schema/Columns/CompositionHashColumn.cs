@@ -8,7 +8,7 @@ namespace Pure.RelationalSchema.Self.Schema.Columns;
 
 public sealed record CompositionHashColumn : IColumn
 {
-    public IString Name => new String("composition_hash");
+    public IString Name => new String("composition_uuid");
 
-    public IColumnType Type => new DeterminedHashColumnType();
+    public IColumnType Type => new UuidColumnType();
 }
