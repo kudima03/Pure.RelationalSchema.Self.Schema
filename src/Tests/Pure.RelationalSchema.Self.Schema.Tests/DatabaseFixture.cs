@@ -12,7 +12,7 @@ public sealed record DatabaseFixture : IDisposable
 
     public DatabaseFixture()
     {
-        Postgres = new PostgreSqlBuilder()
+        Postgres = new PostgreSqlBuilder("postgres")
             .WithDatabase("testdb")
             .WithUsername("postgres")
             .WithPassword("postgres")
