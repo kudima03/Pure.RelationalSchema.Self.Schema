@@ -13,7 +13,8 @@ public sealed record ForeignKeysTable : ITable
     public IString Name => new String("foreign_keys");
 
     public IEnumerable<IColumn> Columns =>
-        [new UuidColumn(),
+        [
+            new UuidColumn(),
             new ReferencingTableColumn(),
             new ReferencedTableColumn(),
             new CompositionHashColumn(),

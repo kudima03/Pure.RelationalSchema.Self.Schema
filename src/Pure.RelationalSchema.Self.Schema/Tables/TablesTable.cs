@@ -13,7 +13,7 @@ public sealed record TablesTable : ITable
     public IString Name => new String("tables");
 
     public IEnumerable<IColumn> Columns =>
-        [new UuidColumn(),new NameColumn(), new CompositionHashColumn()];
+        [new UuidColumn(), new NameColumn(), new CompositionHashColumn()];
 
     public IEnumerable<IIndex> Indexes => [new UuidUniqueIndex()];
 }
