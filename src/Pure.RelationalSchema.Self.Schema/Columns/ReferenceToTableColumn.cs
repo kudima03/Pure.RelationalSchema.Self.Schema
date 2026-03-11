@@ -8,7 +8,7 @@ namespace Pure.RelationalSchema.Self.Schema.Columns;
 
 public sealed record ReferenceToTableColumn : IColumn
 {
-    public IString Name => new String("table_hash");
+    public IString Name => new String("table_uuid");
 
-    public IColumnType Type => new DeterminedHashColumnType();
+    public IColumnType Type => new UuidColumnType();
 }
