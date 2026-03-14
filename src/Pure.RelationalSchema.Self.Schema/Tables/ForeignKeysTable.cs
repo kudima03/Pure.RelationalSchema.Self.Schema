@@ -17,7 +17,6 @@ public sealed record ForeignKeysTable : ITable
             new UuidColumn(),
             new ReferencingTableColumn(),
             new ReferencedTableColumn(),
-            new CompositionHashColumn(),
         ];
 
     public IEnumerable<IIndex> Indexes => [new UuidUniqueIndex()];
