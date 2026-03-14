@@ -12,8 +12,7 @@ public sealed record SchemasTable : ITable
 {
     public IString Name => new String("schemas");
 
-    public IEnumerable<IColumn> Columns =>
-        [new UuidColumn(), new NameColumn()];
+    public IEnumerable<IColumn> Columns => [new UuidColumn(), new NameColumn()];
 
     public IEnumerable<IIndex> Indexes => [new UuidUniqueIndex()];
 }
