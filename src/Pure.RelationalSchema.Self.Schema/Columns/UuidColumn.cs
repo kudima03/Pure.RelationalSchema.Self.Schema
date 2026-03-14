@@ -6,9 +6,9 @@ using String = Pure.Primitives.String.String;
 
 namespace Pure.RelationalSchema.Self.Schema.Columns;
 
-public sealed record CompositionHashColumn : IColumn
+public sealed record UuidColumn : IColumn
 {
-    public IString Name => new String("composition_hash");
+    public IString Name => new String("uuid");
 
-    public IColumnType Type => new DeterminedHashColumnType();
+    public IColumnType Type => new UuidColumnType();
 }
