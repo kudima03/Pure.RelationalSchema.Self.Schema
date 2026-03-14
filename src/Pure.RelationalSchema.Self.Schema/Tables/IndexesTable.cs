@@ -12,8 +12,7 @@ public sealed record IndexesTable : ITable
 {
     public IString Name => new String("indexes");
 
-    public IEnumerable<IColumn> Columns =>
-        [new UuidColumn(), new IsUniqueColumn()];
+    public IEnumerable<IColumn> Columns => [new UuidColumn(), new IsUniqueColumn()];
 
     public IEnumerable<IIndex> Indexes => [new UuidUniqueIndex()];
 }
