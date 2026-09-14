@@ -13,7 +13,7 @@ dotnet format --verify-no-changes             # check code style (CI enforces th
 csharpier check .                             # check code style (CI enforces this)
 dotnet format && csharpier format .           # auto-fix code style
 dotnet test --no-build --verbosity normal --logger trx --collect:"XPlat Code Coverage"
-dotnet pack --configuration Release -p:PackageVersion=<version> --output .
+dotnet pack --configuration Release -p:Version=<version> --output .
 ```
 
 Tests require Docker — the test project uses Testcontainers to spin up a real PostgreSQL container.
