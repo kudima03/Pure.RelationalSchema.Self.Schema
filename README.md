@@ -11,7 +11,7 @@ A concrete `ISchema` implementation that describes the relational schema metadat
 
 `Pure.RelationalSchema.Self.Schema` provides `RelationalSchemaSchema` — a sealed record that implements `ISchema` and models the database structure used to store relational schema metadata. The schema name is `"schemas"` and it contains 13 tables and 17 foreign keys representing the entities and relationships of a schema registry (schemas, tables, columns, column types, indexes, and foreign keys) along with all their join tables.
 
-This package is the canonical self-description of the Pure relational schema storage model. It can be passed directly to a storage adapter (e.g. `Pure.RelationalSchema.Storage.PostgreSQL`) to create or migrate the metadata database.
+This package is the canonical self-description of the Pure relational schema storage model. It can be passed directly to a storage adapter (e.g. `Pure.RelationalSchema.Storage.PostgreSQL.Creation`) to create or migrate the metadata database.
 
 ## Public API
 
@@ -92,6 +92,7 @@ dotnet add package Pure.RelationalSchema.Self.Schema
 ```csharp
 using Pure.RelationalSchema.Abstractions.Schema;
 using Pure.RelationalSchema.Self.Schema;
+using Pure.RelationalSchema.Storage.PostgreSQL.Creation;
 
 ISchema schema = new RelationalSchemaSchema();
 
