@@ -39,13 +39,13 @@ This is a **single-type NuGet library** — one public class, no service abstrac
 
 **Physical layout:** sub-namespaces `Tables`, `Columns`, `Indexes`, `ForeignKeys` hold one sealed record each. None of these types are part of the public API surface beyond what `ISchema` exposes — they are implementation detail.
 
-**Dependency on `Pure.RelationalSchema` v2.0.0:** provides concrete `IColumnType` implementations (`StringColumnType`, `UuidColumnType`, `BoolColumnType`, etc.) used by column records, as well as the `ITable`, `IColumn`, `IIndex`, `IForeignKey` interfaces (transitively via `Pure.RelationalSchema.Abstractions`).
+**Dependency on `Pure.RelationalSchema` v2.1.0:** provides concrete `IColumnType` implementations (`StringColumnType`, `UuidColumnType`, `BoolColumnType`, etc.) used by column records, as well as the `ITable`, `IColumn`, `IIndex`, `IForeignKey` interfaces (transitively via `Pure.RelationalSchema.Abstractions`).
 
 **Tests:** xUnit project targeting net10.0. Verifies table and foreign key membership by hash equality (`TableHash`, `ForeignKeyHash` from `Pure.RelationalSchema.HashCodes`). Includes one integration test (`Migrate`) that applies the schema against a real PostgreSQL container via `PostgreSqlCreatedSchema`.
 
 **Multi-targeting:** net7.0, net8.0, net9.0, net10.0. All types must remain AOT-compatible (`IsAotCompatible = true`).
 
-**Package validation:** `EnablePackageValidation = true` with `PackageValidationBaselineVersion = 0.1.0-preview.6.0.0`. Breaking API changes fail the build.
+**Package validation:** `EnablePackageValidation = true` with `PackageValidationBaselineVersion = 0.1.0-preview.6.1.0`. Breaking API changes fail the build.
 
 **Publishing:** triggered by pushing a semver tag matching `*.*.*`. The tag name becomes the `PackageVersion`. Packages are published to both GitHub Packages and NuGet.org.
 
