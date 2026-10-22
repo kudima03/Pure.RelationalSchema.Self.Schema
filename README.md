@@ -72,7 +72,7 @@ All entity tables (`column_types`, `columns`, `indexes`, `tables`, `foreign_keys
 
 ## Dependencies
 
-- [`Pure.RelationalSchema`](https://github.com/kudima03/Pure.RelationalSchema/tree/2.0.0) — concrete column type implementations (`StringColumnType`, `UuidColumnType`, etc.) and base record types used by all table, column, index, and foreign key implementations
+- [`Pure.RelationalSchema`](https://github.com/kudima03/Pure.RelationalSchema/tree/2.1.0) — concrete column type implementations (`StringColumnType`, `UuidColumnType`, etc.) and base record types used by all table, column, index, and foreign key implementations
 
 ## Target Frameworks
 
