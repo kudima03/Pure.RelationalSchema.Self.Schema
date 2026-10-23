@@ -2,7 +2,7 @@ using Pure.RelationalSchema.Abstractions.Schema;
 using Pure.RelationalSchema.HashCodes;
 using Pure.RelationalSchema.Self.Schema.ForeignKeys;
 using Pure.RelationalSchema.Self.Schema.Tables;
-using Pure.RelationalSchema.Storage.PostgreSQL;
+using Pure.RelationalSchema.Storage.PostgreSQL.Creation;
 
 namespace Pure.RelationalSchema.Self.Schema.Tests;
 
