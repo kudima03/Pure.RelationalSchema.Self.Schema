@@ -80,6 +80,7 @@ All entity tables (`column_types`, `columns`, `indexes`, `tables`, `foreign_keys
 - .NET 8
 - .NET 9
 - .NET 10
+- .NET 11
 
 ## Installation
 
